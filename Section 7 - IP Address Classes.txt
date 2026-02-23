@@ -1,0 +1,54 @@
+Section 7 - IP Address Classes
+
+Class A - Large networks (Rare)
+Range: 1.0.0.0 – 126.255.255.255
+First octet range: 1 – 126
+Default subnet mask: 255.0.0.0 → /8
+Structure:Network.Host.Host.Host
+Hosts per network: 16,777,214 hosts
+Special: 127.x.x.x = Loopback (used for testing)
+Reserved Private Addresses: 10.0.0.0 to 10.255.255.255 (Can be assigned to hosts but they are not routable on public internet)
+Example: 10.5.2.1
+
+
+Class B - Medium networks (Sometimes)
+Range: 128.0.0.0 – 191.255.255.255
+First octet range: 128 – 191
+Default subnet mask: 255.255.0.0 → /16
+Structure: Network.Network.Host.Host
+Hosts per network: 65,534 hosts
+Reserved Private Addresses: 172.16.0.0 to 172.31.255.255 (Can be assigned to hosts but they are not routable on public internet)
+Example: 172.16.5.4
+
+
+Class C - Small networks (Very common)
+Range: 192.0.0.0 – 223.255.255.255
+First octet range: 192 – 223
+Default subnet mask: 255.255.255.0 → /24
+Structure: Network.Network.Network.Host
+Hosts per network: 254 hosts
+Reserved Private Addresses: 192.168.0.0 to 192.168.255.255 (Can be assigned to hosts but they are not routable on public internet)
+Example: 192.168.1.10
+
+
+Class D - Multicast (Rare)
+Range: 224.0.0.0 – 239.255.255.255
+Used for multicast (one-to-many communication)
+Not used for regular host addressing
+Example: 224.0.0.1
+
+
+Class E - Experimental (Not for normal use)
+Range: 240.0.0.0 – 255.255.255.255
+Reserved for research/testing.
+Not used in normal networks.
+
+
+Easy Trick to Identify Class
+Just look at the first octet:
+First Octet	Class
+1 – 126	    A
+128 – 191	B
+192 – 223	C
+224 – 239	D
+240 – 255	E
