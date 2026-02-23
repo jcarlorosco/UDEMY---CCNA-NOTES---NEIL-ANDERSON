@@ -41,14 +41,15 @@ Example: 224.0.0.1
 Class E - Experimental (Not for normal use)
 Range: 240.0.0.0 – 255.255.255.255
 Reserved for research/testing.
+Broadcast Address: 255.255.255.255
 Not used in normal networks.
 
 
 Easy Trick to Identify Class
 Just look at the first octet:
 First Octet	Class
-1 – 126	    A
-128 – 191	B
-192 – 223	C
+1 – 126	  A    /8     255.0.0.0
+128 – 191	B    /16    255.255.0.0
+192 – 223	C    /24    255.255.255.0
 224 – 239	D
 240 – 255	E
