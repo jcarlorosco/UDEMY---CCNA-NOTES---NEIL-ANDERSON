@@ -1,0 +1,43 @@
+Section 3 - Host to Host Communication
+
+
+Very basic Introduction to Networking
+
+Endpoint Devices
+- Endpoint devices are devices that people use directly on a network.
+Examples: Computer (PC or laptop), Smartphone, Printer, Server, etc.
+- These devices send and receive data on the network.
+
+
+Wireless Access Point (WAP)
+- A Wireless Access Point (WAP) allows wireless devices (like phones and laptops) to connect to a wired network using Wi-Fi.
+- It acts like a bridge between wireless devices and the wired network.
+
+
+Switch
+- A switch connects multiple devices inside the same network (usually in a building).
+- It works like a smart traffic controller inside a building.
+
+
+Router
+- A router connects different networks together.
+- It works like a post office directing mail between cities.
+
+
+Firewall
+- A firewall is a security device or software that protects a network.
+- Think of it as a security guard for your network.
+
+
+LAN (Local Area Network)
+- A LAN (Local Area Network) is a network that connects devices in a small area.
+
+
+WAN (Wide Area Network)
+- A network that covers a large geographic area.
+- WAN connects networks across cities, countries, or even the whole world.
+
+
+====================================================================================
+
+OSI reference Model Overview (Open Systems Interconnect Model)
