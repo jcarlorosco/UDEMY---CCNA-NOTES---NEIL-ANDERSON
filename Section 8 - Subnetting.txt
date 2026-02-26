@@ -1,0 +1,86 @@
+Section 8 - Subnetting
+
+CIDR (Classless Inter-Domain Routing)
+	- Removed the fixed /8, /16 and /24 requirements for the address classes.
+	- Allowed them to be split or 'subnetted' into smaller networks.
+	
+Route Summarisation
+	- Instead of routing all hosts to other ISP they can be summarized as one
+	- ISP A 175.10.0.0 /16 advertise -> 175.10.0.0/24 - 175.10.255.0/24
+	- ISP B 175.11.0.0 /16 advertise -> 175.11.0.0/24 - 175.11.255.0/24
+	- This reduces the size of ISP A's routing table and takes up less memory.
+	- If an individual link goes down in ISP B, it has no impact on ISP A.
+	
+Subnetting
+	- Is the process of dividing a large IP network into smaller, more manageable networks called subnets.
+	- Breaking one big network into smaller networks.
+	
+Subnetting Practice Question
+
+Given: 198.22.45.173 /26
+Network Address: 198.22.45.128
+Broadcast address: 198.22.45.191
+Valid Host address: 198.22.45.129 - 198.22.45.190
+Subnet mask in dotted decimal notation: 255.255.255.192
+
+==========================================================================
+
+Class C Network 200.15.10.0 /24
+Engineering departments in both sites have 28 hosts.
+Calculate the optimal subnet mask for the engineering departments
+
+Convert - 28u -> 5b
+Subtract - 32 - 5b = /27
+Ipasok - 32i sa 4th Octet
+
+Second Engineering Department
+Network: 200.15.10.32 /27
+Host: 200.15.10.33 to 62
+Last IP/Broadcast: 200.15.10.63
+
+First engineering Departments
+Network: 200.15.10.0 /27
+Hosts: 200.15.10.1 - 30
+Broadcast: 200.15.10.31
+
+-----
+
+New York Sales - 14 Hosts
+
+Convert - 14u -> 4b
+Add - /24 (original) + 4b = /28
+Ipasok - 16i sa 4th Octet
+
+Network: 200.15.10.64 /28
+Host: 200.15.10.65 to 78
+Last IP/Broadcast: 200.15.10.79
+
+Next network = 200.15.10.80
+
+-----
+
+Boston Sales - 7 Hosts
+
+Convert - 4b
+Add - /24 (original) + 4 = /28
+Ipasok = 16i sa 4th octet
+
+Network: 200.15.10.80 /28
+Host: 200.15.10.81 to 94
+Last IP/Broadcast: 200.15.10.95
+
+Next network = 200.15.10.96
+
+-----
+
+2 Routers
+
+Convert = 2 routers = 2b
+Subtract = 32 -2 = /30
+Ipasok =  4i sa 4th octet
+
+Network: 200.15.10.96 /30
+Host: 200.15.10.97 - 98
+Last IP/Broadcast: 200.15.10.99
+
+Next network: 200.15.10.100
