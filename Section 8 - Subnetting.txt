@@ -92,7 +92,39 @@ IP Address 135.15.10.138 /29
 Find the network address: 135.15.10.136
 Range of valid Address: 135.15.10.137 - 142
 Broadcast address: 135.15.10.143
-
 Next subnet: 135.15.10.144 /29
 
+
+---
+
+Class A on 4th Octet
+60.0.0.0 /8
+If we apply the subnet mask 255.255.255.240, how many subnets do we have and how many hosts per subnet?
+
+Answer:
+255.255.255.240 subnet mask is /28
+14 hosts per network (2^4 - 2) = 4 allocated to host portion, then - 2 for network and broadcast ip
+Because we were allocated a Class A /8 address range, we have 20 bits for network addresses
+This allows 1,048,576 subnets (2^20) (Given /8 - /28)
+
+For IP Address 60.15.10.75 /28, what is the network address, broadcast address and range of valid IP address?
+
+Network Address: 60.15.10.64
+Range of valid address: 60.15.10.65 - .78
+Broadcast address: 60.15.10.79
+Next network address: 60.15.10.80
+
+--
+
+Class A on 3rd Octet
+60.0.0.0 /8
+Subnet to /19 255.255.224.0
+2^13 (13 bits remaining for host) - 2 = 8190 hosts per network
+2^11 ( (/8 - /19) = 11 bits for network addresses) = 2048 subnets
+
+60.15.10.75 /19 - 32i
+Network Address: 60.15.0.0
+Range of valid address: 60.15.0.1 - 60.15.31.254
+Broadcast address: 60.15.31.255
+Next network address: 60.15.32.0
 
