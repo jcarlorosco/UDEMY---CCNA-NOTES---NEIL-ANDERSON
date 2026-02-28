@@ -128,3 +128,62 @@ Range of valid address: 60.15.0.1 - 60.15.31.254
 Broadcast address: 60.15.31.255
 Next network address: 60.15.32.0
 
+--
+
+Subnetting Large Networks
+
+Subnet the 134.65.0.0 network into six different networks
+what subnet mask do you use?
+
+3 bits would provide 8 subnets (2^3)
+
+default subnet is /16
+Convert 6 = 3 bits
+Add to default /16 + 3 = /19
+Increment = /19 = 32i
+
+134.65.0.0
+134.65.32.0
+134.65.64.0
+134.65.96.0 .... etc
+
+Each subnet (2^13 - 2) = 8190 Hosts (Remaining host portion)
+
+
+--------
+
+Private IP Addresses
+
+RFC 1918 Private Address
+
+The Internet Engineering Task Force (IETF) documents standards with RFC's (Requests For Comments)
+RFC 1918 specifies private IP address ranges which are not routable on the public internet.
+
+Range of private addresses in each address class
+
+Class A private address
+10.0.0.0 - 10.255.255.255
+10.0.0.0 /8
+10.0.0.0 255.0.0.0
+
+Class B private address
+172.16.0.0 - 172.31.255.255
+172.16.0.0 /12
+172.16.0.0 255.240.0.0
+
+Class C private address
+192.168.0.0 - 192.168.255.255
+192.168.0.0 /16
+192.168.0.0 255.255.0.0
+
+Today;s Networks
+
+Most enterprises today use RFC 1918 IPv4 addresses with NAT (Network Address Translation).
+RFC 1918 has the security benefit of hiding inside hosts by default (they don't have a publicly routable IP Address)
+plus network engineers have more experience with IPv4 than v6.
+
+
+
+
+
+
