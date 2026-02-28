@@ -90,8 +90,9 @@ Next network: 200.15.10.100
 IP Address 135.15.10.138 /29
 
 Find the network address: 135.15.10.136
-Range of valid Address: 135.15.10.137 - 138
-Broadcast address: 135.15.10.139
+Range of valid Address: 135.15.10.137 - 142
+Broadcast address: 135.15.10.143
 
-Next subnet: 135.15.10.140 /29
+Next subnet: 135.15.10.144 /29
+
 
