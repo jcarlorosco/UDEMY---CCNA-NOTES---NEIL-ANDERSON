@@ -182,8 +182,14 @@ Most enterprises today use RFC 1918 IPv4 addresses with NAT (Network Address Tra
 RFC 1918 has the security benefit of hiding inside hosts by default (they don't have a publicly routable IP Address)
 plus network engineers have more experience with IPv4 than v6.
 
+Common to see /24 subnets being used for end hosts, /30 for point to point links, and /32 for loopbacks.
+Complex VLSM (Variable Length Subnet Masking) is more common in enterprises which use public IP addresses on their inside networks and need to maximize their use.
 
+-------
 
+Subnetting Practice
 
-
+https://subnetting.org/
+http://subnettingquestions.com/
+https://subnettingpractice.com/
 
