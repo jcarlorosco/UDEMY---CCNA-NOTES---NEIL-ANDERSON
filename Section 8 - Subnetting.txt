@@ -84,3 +84,14 @@ Host: 200.15.10.97 - 98
 Last IP/Broadcast: 200.15.10.99
 
 Next network: 200.15.10.100
+
+---
+
+IP Address 135.15.10.138 /29
+
+Find the network address: 135.15.10.136
+Range of valid Address: 135.15.10.137 - 138
+Broadcast address: 135.15.10.139
+
+Next subnet: 135.15.10.140 /29
+
