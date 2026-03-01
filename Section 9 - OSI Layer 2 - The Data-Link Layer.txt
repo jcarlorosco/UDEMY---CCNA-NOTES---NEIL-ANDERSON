@@ -1,0 +1,32 @@
+Section 9 - OSI Layer 2 - The Data-Link Layer
+
+Local Area Network Layer 2 - Ethernet
+	Frames are encoded and decoded into bits at layer 2.
+	Error detection and correction for the physical layer can be provided here.
+	Ethernet is the layer 2 medium used on Local Area Networks.
+
+OSI Reference Model - Encapsulation 
+
+Layer		Name			Terminology
+Layer 7		Application		Data
+Layer 6		Presentation
+Layer 5		Session
+Layer 4		Transport		Segment
+Layer 3		Network			Packet
+Layer 2		Data-Link		Frame
+Layer 1		Physical		
+
+The Media Access Control MAC Address
+	Ethernet uses a 48-bit hexadecimal MAC Address.
+	The First 24 bits is the OUI (Organizationally Unique Identifier) which uniquely identifies the manufacturer of the Ethernet port.
+	The OUI is assigned by the IEEE.
+	The last 24 bits is vendor assigned.
+	The burned in MAC Address on every NIC port in the world is globally unique.
+	Example - 00:50:56:C0:00:08
+	
+The 48-bits address space contains potentially 2^48 or 281,474,976,710,656 possible MAC Address.
+
+Ways to get MAC Address to a device
+Windows - ipconfig /all > Physical Address
+Linux - ifconfig > HWaddr
+Cisco Router - enable > show interface > FastEthernet0/0 (BIA - burned in address)
