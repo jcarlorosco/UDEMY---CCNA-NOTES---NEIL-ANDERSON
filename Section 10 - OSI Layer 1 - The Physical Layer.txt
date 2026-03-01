@@ -1,0 +1,38 @@
+Section 10 - OSI Layer 1 - The Physical Layer
+
+OSI Layer 1 - bits
+	Conveys the bit stream - electrical impulse, light or radio signals - through the network at the electrical and mechanical level.
+	It provides the hardware means of sending and receiving data, including defining cables, interface card and physical aspects.
+	
+	Ethernet LAN connections can be carried over coaxial cable (no logner used), twisted copper pair cable, fiber cable or wireless.
+	Copper UTP (Unshielded Twisted Pair) cables are commonly used to connect desktop computers to switches.
+	Connector type is RJ-45 and maximum length is 100 meters.
+	
+UTP Cable Categories
+
+Cateroy		Maximum Bandwidth
+Cat 5			100 Mbps
+Cat 5e			1 Gbps
+Cat 6			10 Gbps
+Cat 7			10 Gbps
+Cat 8			40 Gps
+
+Straight-Throughh vs Crossover UTP Cable
+
+	The receive and transmit wires in a UTP cable can be wired to the RJ-45 connector as either straight-through or crossover.
+	Straight-through cables are used to connect an end device such as a PC or router to a switch.
+	Crossover cables are used to connect devices together directly. They are most often used to connect two devices of the same type.
+	e.g. two computers or two switches to each other.
+	Modern switches support Auto MDI-X where the receive and transmit signals are reconfigured automatically to yield the expected result.
+	
+Fiber Cables
+
+	Fiber optic cables can be used to support longer distances or higher bandwidth requirements.
+	For example between separate buildings in a campus, or for switch to switch connections inside a building.
+	
+Single Mode vs Multi Mode Fiber
+
+	Single Mode or Multi Mode Fiber can be used.
+	Single Mode supports higher bandwidth and longer distances but is more expensive.
+	
+PoE - Power Over Ethernet
