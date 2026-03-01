@@ -1,0 +1,102 @@
+Section 11 - Cisco Device Functions
+
+Hubs and Switches
+
+	Hubs and switches perform a similar function.
+	End hosts in a Local Area Network such as PCs, servers and printers plug into them with an Ethernet cable.
+	The end hosts can then communicate with each other through the hub or switch.
+	
+Hubs - Hald Duplex and Shared Collision Domain (Layer 1)
+
+	Hubs operate in half-duplex mode.
+	Attached hosts cannot send and receive data at the same time, they can only do one or the other.
+	All hosts share the same collision domain - only one device can transmit at a time.
+	If two hosts send at the same time a collision will occur.
+	Hosts use Carrier-Sense Multiple Access with Collision Detection (CSMA/CD) to detect collisions and resend.
+	
+Switches - Full Duplex and Seperate Collision Domains (Layer 2)
+
+	Switches can operate in either full-duplex or half-duplex mode.
+	In practice they always operate as full-duplex
+	Attached hosts can be both send and receive data at the same time.
+	All hosts have their own dedicated collision domain.
+	Collision Detection is not required.
+	
++----------------+-------------------+----------------------+
+| Feature        | Half-Duplex       | Full-Duplex          |
++----------------+-------------------+----------------------+
+| Send & Receive | One at a time     | Same time            |
+| Collisions     | Yes               | No                   |
+| Speed          | Slower            | Faster               |
+| Used in        | Hubs, old Ethernet| Switches, modern ETH |
++----------------+-------------------+----------------------+
+
+Hubs operate at OSI Layer 1
+
+	Hubs operate at layer 1 of the OSI model.
+	They are not MAC Address aware.
+	Whenever a fram is received it is flooded out all ports apart from the one it was received on.
+	All attached hosts must process all packets.
+	
+Switches operate at OSI Layer 1
+
+	Switches operate at layer 2 of the OSI model.
+	They also operate at Layer 1
+	They are MAC Address aware.
+	
+	
+================================
+ 
+ Routers (Operate at Layer 3)
+ 
+	Routers know the paths to get to the different IP subnets on a network.
+	They are required to send traffic from one subnet to another.
+	Routers operate at layer 3 of the OSI Model.
+	They also operate at Layers 2 and 1, and will typically have awareness up to layer 7.
+	
+Routers vs Switches
+
+	Routers are Layer 3 aware and can route between different networks.
+	Switches are Layer 2 aware and can switch traffic between hosts on the local are network.
+	Routers support many types of interfaces, such as Ethernet, Seriesl, ISDN, ADSL etc.
+	Switches typically only support Ethernet interfaces.
+	Switches will typically have more ports than routers.
+	Switches forward broadcast traffic, routers do not by default.
+	
+Layer 3 Switches
+
+	Advanced switches are Layer 3 aware and can route traffic between different IP subnets.
+	Layer 3 switches will still typically support only Ethernet interfaces and will have more ports than routers.
+
+
+==================================================
+
+Other Cisco Devies
+
+Security
+
+	Cisco ASA (Adaptive Security Appliance) Firewalls
+	Cisco SourceFire FirePower IPS (Intrusion Prevention System)
+	
+Wireless
+
+	Cisco Wireless LAN Controllers
+	Cisco Wireless Access Points
+	
+Collaboration
+
+	Cisco Unified Communications Manager
+	Cisco IP Phones
+	Cisco TelePresence
+	Cisco Webex
+	
+Data Center
+
+	Cisco UCS (Unified Computing System)
+	Cisco Nexus Switch
+	
+
+	
+	
+	
+
