@@ -8,3 +8,94 @@ DNS The Domain Name System
 	If the internal DNS server cannot resolve a query, it will forward the request out to public DNS servers on the internet.
 	DNS requests are sent using UDP port 53 (and can fail over to TCP).
 
+DNS on cisco Routers
+
+Router DNS Commands
+
+DNS Client:
+	ip domain-lookup
+	ip name-server 172.23.4.1
+	ip domain-name flackboxA.lab (primary domain name)
+	ip domain-list flackboxB.lab (Additional DNS Suffixes to search)
+
+Additional DNS Server Commands:
+	ip dns server
+	ip host LinuxA 172.23.4.2
+
+
+Lab sample
+!@R3 DNS
+sh ip int brief
+conf t
+ ip domain-lookup
+ ip name-server 10.10.20.1
+ ip damain-name flackbox.lab
+ ip dns server
+ ip host R1 10.10.10.1
+ ip host R2 10.10.10.2
+ ip host R3 10.10.20.1
+ ip host R1.flackbox.lab 10.10.10.1
+ ip host R2.flackbox.lab 10.10.10.2
+ ip host R3.flackbox.lab 10.10.20.1
+end
+
+!@R1 DNS Client
+conf t
+ ip domain-lookup
+ ip name-server 10.10.20.1
+ ip domain-list flackbox.lab
+end
+
+Try ping R3 R2 it should be pingable with domain name server indicated.
+
+====================================================
+
+ARP - Address Resolution Protocol
+
+OSI Reference Model Encapsulation
+
+Layer	Name			Includes				Devices
+7		Application
+6		Presentation
+5		Session
+4		Transport		TCP/UDP,Port		
+3		Network			IP Address				Routers
+2		Data-Link		Ethernet MAC Address	Switches
+1		Physical
+
+
+IP to MAC Address Resolution (ARP)
+
+	The sender needs to know the reciver's IP Address and MAC address to form the packet it's going to send.
+	We can point the sender directly at the destination IP address or at a user friendly FQDN such as www.cisco.com
+	DNS Domain Name System maintains a mapping of FQDNs to IP addresses.
+	ARP Address Resolution Protocol is used to map the IP address to MAC Address
+
+Host ARP Commands
+
+	ARP replies are saved in a hosts ARP cache so it doesn't need to send an ARP request every time it wants to communicate.
+
+Windows
+View ARP cache: arp -a
+Clear ARP cache: netsh interface ip delete arpcache
+
+Linux
+View ARP cache: arp -n
+Clear ARP cache: ip -s -s neigh flush all
+
+ARP to routed traffic
+
+	When the send and receiver are on different IP subnets, the traffic must be fowarded by a router.
+	In the following example, 172.23.4.1 /24 wants to send a packet to 192.168.10.1 /24
+
+Cisco Router ARP Commands
+
+View ARP cache: show arp
+Clear ARP cache: clear arp-cache
+
+
+
+
+
+
+
