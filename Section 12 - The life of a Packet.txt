@@ -1,0 +1,10 @@
+Section 12 - The life of a Packet
+
+DNS The Domain Name System
+
+	The Domain Name System (DNS)  resolves a Fully Qualified Domain Name (FQDN) such as www.cisco.com to an IP address.
+	Enterprises will typically have an internal DNS server which can resolve the IP addresses of internal hosts.
+	Hosts will send their DNS queries to this server.
+	If the internal DNS server cannot resolve a query, it will forward the request out to public DNS servers on the internet.
+	DNS requests are sent using UDP port 53 (and can fail over to TCP).
+
