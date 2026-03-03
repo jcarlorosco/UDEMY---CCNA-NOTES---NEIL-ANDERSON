@@ -94,6 +94,24 @@ View ARP cache: show arp
 Clear ARP cache: clear arp-cache
 
 
+=========================================
+
+The Life of a Packet
+
+OSI Reference Model - Encapsulation Review
+
+Layer	Name			Includes				Devices
+7		Application
+6		Presentation
+5		Session
+4		Transport		TCP/UDP,Port		
+3		Network			IP Address				Routers
+2		Data-Link		Ethernet MAC Address	Switches
+1		Physical
+
+
+
+
 
 
 
