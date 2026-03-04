@@ -1,0 +1,33 @@
+Section 13 - The Cisco Troubleshooting Methodology
+
+Define Problem
+		|
+Gather Information
+		|
+Analyze Information
+		|
+Eliminate Potential Causes
+		|
+Propose Hypothesis
+		|
+Test Hypothesis
+		|
+Solve Problem and Document Solution
+
+Troubleshooting Methods
+
+Top Down - OSI
+Bottom Up - OSI
+Divide and Conquer (Upper and lower)- OSI
+
+	- Compare configurations
+	- Trace the path (Start from source to destination)
+	- Swap out components (swap with working hardware)
+
+Connectivity Troubleshooting Methods
+
+	- Ping (ICMP)
+	- Traceroute
+	- Telnet (Test if the port is open to the destination)
+
+
