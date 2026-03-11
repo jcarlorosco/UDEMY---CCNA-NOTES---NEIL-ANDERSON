@@ -1,0 +1,45 @@
+Section 14 - Cisco Router and Switch Basics
+
+Basic Router and Switch Configuration
+
+	A router provides connectivity between different IP subnets.
+	An IP Address must be configured on the interfaces in each subnets.
+	
+interface FastEthernet0/0
+ip address 192.168.0.1 255.255.255.0
+no shutdown
+!
+interface FastEthernet0/1
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+
+
+Switch Management IP Address
+
+	A layer 2 switch is not IP routing aware.
+	It does however support a single IP address for management.
+	The IP address and subnet mask is configured on the Switched Virtual Interface (SVI) for the default VLAN 1.
+	A default gateway also needs to be configured to allow connectivity to other subnets.
+	
+Management IP Address
+
+interface vlan 1
+ip address 192.168.0.10 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.168.0.1
+
+Additional commands need to be entered to allow Telnet or SSH (Secure Shell) access, we'll cover these in the 'Securing Cisco Devices' section.
+
+Hostname
+
+	A descriptive hostname makes it easier to identify the device.
+	Eg NY-F1-SW1
+	
+	Switch (config) # hostname SW1
+	SW1 (config) #
+	
+Interface Descriptions
+
+	SW1 (config) # interface FastEthernet 0/1
+	SW1 (config-if) # description Link to R1
