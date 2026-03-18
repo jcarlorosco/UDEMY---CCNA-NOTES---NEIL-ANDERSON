@@ -110,3 +110,17 @@ CDP Cisco Discovery Protocol
 	It is enabled by default on most Cisco equipment.
 	It works at Layer 2 so it is not necessary for the device to have an IP address.
 
+Commands for CDP
+
+	switch (config)# cdp run
+	switch (config)# no cdp run
+	switch (config-if)# no cdp enable
+	switch# show cdp
+	switch# show cdp neighbors
+	switch# show cdp neighbors detail
+
+cdp run → ON (whole device)
+no cdp enable → OFF (one port)
+show cdp neighbors → who is connected
+
+
