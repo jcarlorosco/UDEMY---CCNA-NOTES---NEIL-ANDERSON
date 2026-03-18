@@ -99,3 +99,14 @@ show interface → detailed info
 show version → device details
 
 =======================================================================================
+
+CDP and LLDP
+
+CDP Cisco Discovery Protocol
+
+	Cisco Discovery Protocol (CDP) is a Cisco proprietary Layer 2 protocol.
+	It is used to share information with other directly connected Cisco equipment, such as the operating system version and IP address.
+	This aids in troubleshooting by allowing administrators to map out how Cisco devices are connected to each other.
+	It is enabled by default on most Cisco equipment.
+	It works at Layer 2 so it is not necessary for the device to have an IP address.
+
